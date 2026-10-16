@@ -74,3 +74,42 @@ footer {
   font-size: 13px; color: var(--ink-mute);
 }
 footer a { color: var(--ink-mute); }
+
+/* Language switch in the brand row of every page */
+.lang-switch {
+  margin-left: auto; flex: none;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+  color: var(--accent); text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--line-soft); border-radius: 999px;
+  padding: 7px 12px;
+}
+.lang-switch:hover { border-color: var(--accent); }
+
+/* Root language picker (index.html), mirroring the app's first screen */
+.splash {
+  min-height: 100vh; min-height: 100dvh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 40px 20px;
+}
+.splash .brand-mark { width: 56px; height: 56px; margin-bottom: 28px; }
+.splash .brand-mark svg { width: 26px; height: 26px; }
+.splash h1 { font-size: 30px; line-height: 1.2; margin: 0; }
+.splash h1 span { display: block; }
+.splash h1 .alt { color: var(--ink-soft); }
+.choices {
+  width: 100%; max-width: 360px;
+  display: grid; gap: 14px; margin: 32px 0 40px;
+}
+.choice {
+  display: block; padding: 16px 20px; border-radius: 999px;
+  background: var(--accent); color: var(--bg);
+  font-size: 19px; font-weight: 600; text-decoration: none;
+}
+.choice:hover { background: #0b3b35; }
+.choice:focus-visible, .lang-switch:focus-visible {
+  outline: 3px solid var(--accent); outline-offset: 3px;
+}
+.splash-name { font-size: 13px; color: var(--ink-mute); margin: 0; }
+.splash-name span { display: block; }
